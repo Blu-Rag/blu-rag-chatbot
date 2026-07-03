@@ -1,0 +1,32 @@
+# Core
+python-dotenv
+
+# LangChain
+langchain
+langchain-core
+langchain-community
+
+# Groq
+langchain-groq
+groq
+
+# Gemini
+langchain-google-genai
+google-generativeai
+
+# Mistral
+langchain-mistralai
+mistralai
+
+#Open_Router
+langchain_openrouter
+
+# Tokenizers
+tiktoken
+
+# Web Apps
+streamlit
+
+# Utilities
+ipykernel
+torchvision
