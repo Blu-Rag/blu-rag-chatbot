@@ -30,3 +30,7 @@ Blu-Rag Chatbot is a Streamlit-based roleplay application that allows you to cre
    ```bash
    git clone https://github.com/Blu-Rag/blu-rag-chatbot.git
    cd blu-rag-chatbot
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
