@@ -1,10 +1,6 @@
 """
 Character Module for Blu-Rag Chatbot
 
-This module defines the Character dataclass and prompt template used for
-roleplay interactions. Characters can be customized with various attributes
-to create unique roleplay experiences.
-
 Author: Blu-Rag
 Project: Blu-Rag Chatbot
 """
@@ -15,21 +11,6 @@ from langchain_core.prompts import PromptTemplate
 
 @dataclass
 class Character:
-    """
-    Dataclass representing a roleplay character.
-
-    Attributes:
-        name: Character's name
-        age: Character's age
-        gender: Character's gender
-        personality: Description of character's personality
-        traits: List of character traits
-        likes: Things the character likes
-        dislikes: Things the character dislikes
-        speaking_style: How the character speaks
-        background: Character's backstory
-    """
-
     name: str = ""
     age: int = 25
     gender: str = ""
@@ -41,21 +22,9 @@ class Character:
     background: str = ""
 
     def is_valid(self) -> bool:
-        """
-        Check if character has minimum required fields.
-
-        Returns:
-            bool: True if character has name and personality
-        """
         return bool(self.name.strip() and self.personality.strip())
 
     def to_dict(self) -> dict:
-        """
-        Convert character to dictionary format.
-
-        Returns:
-            dict: Character attributes as dictionary
-        """
         return {
             "name": self.name,
             "age": self.age,
@@ -69,12 +38,6 @@ class Character:
         }
 
     def get_display_name(self) -> str:
-        """
-        Get character's display name for UI.
-
-        Returns:
-            str: Character name or 'AI' if not set
-        """
         return self.name.strip() if self.name.strip() else "AI"
 
     def reset(self) -> None:

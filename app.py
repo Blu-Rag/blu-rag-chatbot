@@ -1,9 +1,6 @@
 """
 Blu-Rag Chatbot - Roleplay AI with Optimized Short-Term Memory
 
-Main Streamlit application providing the user interface for
-creating characters and chatting with AI roleplay partners.
-
 Features:
 - Multi-chat support
 - Custom character creation
@@ -31,10 +28,6 @@ from chatbot import (
     create_system_prompt,
 )
 
-# =============================================================================
-# Page Configuration
-# =============================================================================
-
 st.set_page_config(
     page_title="Blu-Rag Chatbot",
     page_icon="🤖",
@@ -54,10 +47,6 @@ st.set_page_config(
         """,
     },
 )
-
-# =============================================================================
-# Custom CSS Styling
-# =============================================================================
 
 st.markdown(
     """
@@ -322,10 +311,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# =============================================================================
-# Session State Initialization
-# =============================================================================
-
 
 def init_session_state():
     """Initialize all session state variables."""
@@ -350,10 +335,6 @@ def init_session_state():
 
 
 init_session_state()
-
-# =============================================================================
-# Header Component
-# =============================================================================
 
 
 def render_header():
@@ -387,11 +368,6 @@ def render_header():
         """,
             unsafe_allow_html=True,
         )
-
-
-# =============================================================================
-# Sidebar Component
-# =============================================================================
 
 
 def render_sidebar():
@@ -495,11 +471,6 @@ def render_sidebar():
 
             if mem_len > 30:
                 st.warning(f"⚠️ Memory will summarize at {40} messages")
-
-
-# =============================================================================
-# Chat Component
-# =============================================================================
 
 
 def render_chat():
@@ -614,11 +585,6 @@ def handle_message(user_input: str):
     })
 
     st.rerun()
-
-
-# =============================================================================
-# Character Component
-# =============================================================================
 
 
 def render_character():
@@ -742,11 +708,6 @@ def render_character():
         """,
             unsafe_allow_html=True,
         )
-
-
-# =============================================================================
-# Main Application
-# =============================================================================
 
 
 def main():
